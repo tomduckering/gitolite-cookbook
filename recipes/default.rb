@@ -23,7 +23,7 @@ directory '/home/git/bin' do
   mode 0755
 end
 
-directory '/srv/git' do
+directory node['gitolite']['repo_base'] do
   owner username
   group groupname
   mode 0755
@@ -33,7 +33,7 @@ link '/home/git/repositories' do
   owner username
   group groupname
   mode 0755
-  to '/srv/git'
+  to node['gitolite']['repo_base']
 end
 
 #TODO - replace with fetching gitolite from github.
