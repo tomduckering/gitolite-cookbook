@@ -1,1 +1,1 @@
-default['gitolite']['repo_base'] = '/srv/git' # The default location used by the git cookbook.
+default['gitolite']['repo_base'] = git['server']['base_path'] #copy the location from the git install.
